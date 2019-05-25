@@ -118,7 +118,7 @@ function checkForStateSelection(statesArray, resultCount){
 function handleFormSubmit() {
     $('#parkSearch').submit(function(e){
         e.preventDefault();
-        const resultCount = $('#quantity').val() - 1;
+        const resultCount = $('#quantity').val();
         checkForStateSelection(selectedStates, resultCount);
         resetSearch();
     })
