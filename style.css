@@ -71,6 +71,10 @@ select,input[type=number] {
     width: 60%;
 }
 
+input[type=number] {
+    width: 100%;
+}
+
 form {
     margin-top: 3rem;
     display: grid;
@@ -158,6 +162,10 @@ form div {
         "st"
         "nm"
         "sr";
+    }
+
+    form div {
+        padding: 1rem;
     }
 
     .formSection {
