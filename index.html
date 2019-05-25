@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>National Park Locator</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Open+Sans:400,700&display=optional" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header role="banner">
+    <header class="header" role="banner">
         <h1>National Park Locator</h1>
         <h2>Find parks in any state.</h2>
     </header>
-    <main role="main">
-        <section>
+    <main class="wrapper" role="main">
+        <section class="formSection">
             <form id="parkSearch">
+                <div class="states">
                 <fieldset>
                     <legend>Choose which states to search:</legend>
                         <select name="state" id="state">
@@ -74,13 +76,18 @@
                     <button id="selectState">Select State</button>
                 </fieldset>
                 <p>Currently Selected States: <span id="selectedStates"></span></p>
+            </div>
+            <div class="numChoice">
                 <fieldset>
                     <legend>How many results would you like?:</legend>
                     <input type="number" name="quantity" id="quantity" value="10" min="1" max="50">
                 </fieldset>
-                <button type="submit">Search</button>
+            </div>
+            <div class="submit">
+                <button type="submit" class="btn">Search</button>
+            </div>
             </form>
-            <h4 class="hidden">Displaying: <span id="limitResults"></span> of <span id="totalResults"></span>National Parks in your search.</h4>
+            <h4 class="hidden">Displaying: <span id="limitResults"></span> of <span id="totalResults"></span> National Parks in your search.</h4>
         </section>
         <section id="searchResults">
         </section>

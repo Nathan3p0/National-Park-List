@@ -55,7 +55,7 @@ function displayResults(response) {
     for(let i = 0; i < response.data.length; i++){
         $('#searchResults').append(`
             <div>
-                <img src="${printImages(response.data[i])}" alt="state park picture">
+                <img src="${printImages(response.data[i])}" class="crop "alt="state park picture">
                 <h3>${response.data[i].fullName}</h3>
                 <p class="p-heading">Park Description:</p>
                 <p>${response.data[i].description}</p>
