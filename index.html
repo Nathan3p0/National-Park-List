@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>National Park Locator</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header role="banner">
@@ -71,15 +73,18 @@
                         </select>
                     <button id="selectState">Select State</button>
                 </fieldset>
-                <p>Currently Selected States: <span id="selectedStates">MI</span></p>
+                <p>Currently Selected States: <span id="selectedStates"></span></p>
                 <fieldset>
                     <legend>How many results would you like?:</legend>
-                    <input type="number" name="quantity" id="quantity" min="1" max="50">
+                    <input type="number" name="quantity" id="quantity" value="10" min="1" max="50">
                 </fieldset>
+                <button type="submit">Search</button>
             </form>
+            <h4 class="hidden">Displaying: <span id="limitResults"></span> of <span id="totalResults"></span>National Parks in your search.</h4>
         </section>
         <section id="searchResults">
         </section>
     </main>
+    <script src="app.js"></script>
 </body>
 </html>
