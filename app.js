@@ -40,7 +40,7 @@ function getParkLocations(query, maxResults=10) {
 }
 
 // Display results
-//
+// If no image exists on result, display random image
 
 function printImages(response) {
     if(response.images.length > 1) {
